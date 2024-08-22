@@ -1,0 +1,84 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-container {
+    width: 640px;
+    height: 480px;
+    background-image: url('software.png');
+    background-size: 1280px 960px; /* 2 times the original size to fit each part */
+    background-repeat: no-repeat;
+}
+
+/* Default: last image, bottom-right */
+.image-container {
+    background-position: -960px -480px;
+}
+
+/* width > 400px: fourth image on the second row */
+@media (min-width: 401px) and (max-width: 500px) {
+    .image-container {
+        background-position: -640px -480px;
+    }
+}
+
+/* width > 500px: third image on the second row */
+@media (min-width: 501px) and (max-width: 600px) {
+    .image-container {
+        background-position: -320px -480px;
+    }
+}
+
+/* width > 600px: second image on the second row */
+@media (min-width: 601px) and (max-width: 700px) {
+    .image-container {
+        background-position: -0px -480px;
+    }
+}
+
+/* width > 700px: first image on the second row */
+@media (min-width: 701px) and (max-width: 800px) {
+    .image-container {
+        background-position: -960px -0px;
+    }
+}
+
+/* width > 800px: last image on the top row */
+@media (min-width: 801px) and (max-width: 900px) {
+    .image-container {
+        background-position: -720px -0px;
+    }
+}
+
+/* width > 900px: fourth image on the top row */
+@media (min-width: 901px) and (max-width: 1000px) {
+    .image-container {
+        background-position: -480px -0px;
+    }
+}
+
+/* width > 1000px: third image on the top row */
+@media (min-width: 1001px) and (max-width: 1100px) {
+    .image-container {
+        background-position: -320px -0px;
+    }
+}
+
+/* width > 1100px: second image on the top row */
+@media (min-width: 1101px) and (max-width: 1200px) {
+    .image-container {
+        background-position: -160px -0px;
+    }
+}
+
+/* width > 1200px: top-left image */
+@media (min-width: 1201px) {
+    .image-container {
+        background-position: -0px -0px;
+    }
+}
