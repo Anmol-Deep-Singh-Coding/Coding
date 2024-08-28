@@ -1,80 +1,81 @@
-body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.image-container {
-    width: 625px;
-    height: 625px;
-    overflow: hidden;
-    position: relative;
-}
-
-.responsive-image {
-    position: absolute;
-    width: 1250px; /* 2 times the width of each part */
-    height: 1250px; /* 2 times the height of each part */
-    top: 0;
-    left: 0;
-}
-
-/* Default: top-left (for widths <= 600px) */
-.responsive-image {
-    transform: translate(-0px, -0px);
-}
-
-/* 600px < width <= 800px: top-right */
-@media (min-width: 601px) and (max-width: 800px) {
-    .responsive-image {
-        transform: translate(-625px, -0px);
-    }
-}
-
-/* 800px < width <= 1000px: bottom-left */
-@media (min-width: 801px) and (max-width: 1000px) {
-    .responsive-image {
-        transform: translate(-0px, -625px);
-    }
-}
-
-/* 1000px < width <= 1200px: bottom-right */
-@media (min-width: 1001px) and (max-width: 1200px) {
-    .responsive-image {
-        transform: translate(-625px, -625px);
-    }
-}
-
-/* 1200px < width <= 1400px: bottom-left */
-@media (min-width: 1201px) and (max-width: 1400px) {
-    .responsive-image {
-        transform: translate(-0px, -625px);
-    }
-}
-
-/* 1400px < width <= 1600px: top-right */
-@media (min-width: 1401px) and (max-width: 1600px) {
-    .responsive-image {
-        transform: translate(-625px, -0px);
-    }
-}
-
-/* width > 1600px: top-left */
-@media (min-width: 1601px) {
-    .responsive-image {
-        transform: translate(-0px, -0px);
-    }
-}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Responsive Homer Image</title>
-    <link rel="stylesheet" href="responsive.css">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .image-container {
+            width: 625px;
+            height: 625px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .responsive-image {
+            position: absolute;
+            width: 1250px; /* 2 times the width of each part */
+            height: 1250px; /* 2 times the height of each part */
+            top: 0;
+            left: 0;
+        }
+
+        /* Default: top-left (for widths <= 600px) */
+        .responsive-image {
+            transform: translate(-0px, -0px);
+        }
+
+        /* 600px < width <= 800px: top-right */
+        @media (min-width: 601px) and (max-width: 800px) {
+            .responsive-image {
+                transform: translate(-625px, -0px);
+            }
+        }
+
+        /* 800px < width <= 1000px: bottom-left */
+        @media (min-width: 801px) and (max-width: 1000px) {
+            .responsive-image {
+                transform: translate(-0px, -625px);
+            }
+        }
+
+        /* 1000px < width <= 1200px: bottom-right */
+        @media (min-width: 1001px) and (max-width: 1200px) {
+            .responsive-image {
+                transform: translate(-625px, -625px);
+            }
+        }
+
+        /* 1200px < width <= 1400px: bottom-left */
+        @media (min-width: 1201px) and (max-width: 1400px) {
+            .responsive-image {
+                transform: translate(-0px, -625px);
+            }
+        }
+
+        /* 1400px < width <= 1600px: top-right */
+        @media (min-width: 1401px) and (max-width: 1600px) {
+            .responsive-image {
+                transform: translate(-625px, -0px);
+            }
+        }
+
+        /* width > 1600px: top-left */
+        @media (min-width: 1601px) {
+            .responsive-image {
+                transform: translate(-0px, -0px);
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="image-container">
